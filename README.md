@@ -1,1 +1,3 @@
-# A repository containing all my configs
+# configs
+
+All configuration files for my workstation
