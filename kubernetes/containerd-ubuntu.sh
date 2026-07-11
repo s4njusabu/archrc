@@ -1,9 +1,17 @@
 #!/bin/bash
 set -e
 
-# turn off swap and make it persistent
+# Disable swap now, and persist across reboot regardless of fstab formatting
+# (matches on fstab's 3rd column = "swap", not on spacing or device path)
 sudo swapoff -a
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo cp /etc/fstab /etc/fstab.bak
+sudo awk '{
+  line = $0
+  sub(/^[[:space:]]*/, "", line)
+  if (line ~ /^#/) { print $0; next }
+  if ($3 == "swap") { print "#" $0; next }
+  print $0
+}' /etc/fstab.bak | sudo tee /etc/fstab > /dev/null
 
 # Load required kernel modules
 sudo modprobe overlay
