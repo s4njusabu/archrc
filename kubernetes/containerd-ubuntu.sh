@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e
 
 # turn off swap and make it persistent
@@ -36,11 +35,11 @@ containerd config default | sudo tee /etc/containerd/config.toml
 
 # Enable systemd cgroups
 sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' \
-/etc/containerd/config.toml
+  /etc/containerd/config.toml
 
 # Restart and enable containerd
 sudo systemctl restart containerd
 sudo systemctl enable containerd
 
 # Verify
-systemctl status containerd
+sudo systemctl is-active --quiet containerd && echo "containerd running"
