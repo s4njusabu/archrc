@@ -1,3 +1,3 @@
 # NETWORK CONFIG FILES 
 
-This directory contains XML files to create virtual networks for virt-manager
+This directory contains XML files to create virtual networks in virt-manager
