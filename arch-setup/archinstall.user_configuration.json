@@ -52,7 +52,7 @@
                         "fs_type": "fat32",
                         "mount_options": [],
                         "mountpoint": "/boot",
-                        "obj_id": "24bcd91e-4aa7-4c0c-aff4-bcee096ad08e",
+                        "obj_id": "ba2818c2-f269-457a-b744-8eca5a65bc26",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
@@ -79,7 +79,7 @@
                         "fs_type": "ext4",
                         "mount_options": [],
                         "mountpoint": "/",
-                        "obj_id": "12253313-f02b-4d64-9871-9469c5d311a8",
+                        "obj_id": "ba335280-9ef9-4e68-8af8-9efbdfc8aeec",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
@@ -202,10 +202,12 @@
     "ntp": true,
     "packages": [
         "base-devel",
+        "fastfetch",
+        "firefox",
         "git",
         "rustup",
         "zellij",
-	"ghostty"
+        "ghostty"
     ],
     "pacman_config": {
         "color": true,
@@ -213,15 +215,13 @@
     },
     "profile_config": {
         "gfx_driver": "Nvidia (open kernel module for newer GPUs, Turing+)",
-        "greeter": "plasma-login-manager",
+        "greeter": "gdm",
         "profile": {
             "custom_settings": {
-                "KDE Plasma": {
-                    "plasma_flavor": "plasma-meta"
-                }
+                "GNOME": {}
             },
             "details": [
-                "KDE Plasma"
+                "GNOME"
             ],
             "main": "Desktop"
         }
