@@ -8,7 +8,7 @@ sudo pacman -Syu
 
 # Main packages
 
-sudo pacman -S --needed base-devel git ghostty rustup flatpak zellij tmux lsof tree fastfetch tcpdump bat python podman-docker uv curl unzip unrar less man-db man-pages
+sudo pacman -S --needed base-devel git ghostty rustup flatpak zellij tokei tmux lsof tree fastfetch tcpdump bat python podman-docker uv curl unzip unrar less man-db man-pages
 
 # Browsers
 
@@ -25,4 +25,4 @@ sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highl
 sudo pacman -S --needed vim neovim
 
 # Qemu Virt-manager
-sudo pacman -S --needed qemu-desktop virt-manager dnsmasq 
+sudo pacman -S --needed qemu-desktop virt-manager dnsmasq dmidecode 
