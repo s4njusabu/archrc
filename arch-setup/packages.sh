@@ -8,7 +8,7 @@ sudo pacman -Syu
 
 # Main packages
 
-sudo pacman -S --needed base-devel git ghostty rustup flatpak zellij nmap tokei tmux lsof tree fastfetch tcpdump bat python podman-docker uv curl unzip unrar less man-db man-pages
+sudo pacman -S --needed base-devel git ghostty rustup flatpak zellij nmap aria2 tokei tmux lsof tree fastfetch tcpdump bat python podman-docker uv curl unzip unrar less man-db man-pages
 
 # Browsers
 
